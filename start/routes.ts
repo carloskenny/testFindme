@@ -20,7 +20,7 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.post('/authenticate', "SessionsController.create");
+Route.post('/login', "SessionsController.create");
 
 Route.post("/users", "UsersController.create");
 
@@ -31,3 +31,7 @@ Route.post("/clients", "ClientsController.create");
 Route.get("/clients", "ClientsController.index");
 
 Route.post("/orderServices", "OrderServicesController.create");
+
+Route.get("/orderServices", "OrderServicesController.index");
+
+

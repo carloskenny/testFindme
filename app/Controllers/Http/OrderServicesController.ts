@@ -29,7 +29,11 @@ export default class OrderServicesController {
 
   public async store({ }: HttpContextContract) { }
 
-  public async show({ }: HttpContextContract) { }
+  public async show({ params }: HttpContextContract) {
+    const orderService = OrderService.findOrFail(params.id)
+
+    return orderService
+  }
 
   public async edit({ }: HttpContextContract) { }
 
